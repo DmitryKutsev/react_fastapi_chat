@@ -19,9 +19,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.get("/health")
 async def healthcheck():
-    return {"status": "ok"} 
+    return {"status": "ok"}
 
 
 @app.get("/get_audio_text")
@@ -30,6 +31,6 @@ async def get_audio():
         return {"text": audio_to_text(record)}
 
 
-@app.post("/responce_text")
+@app.post("/response_text")
 async def responce_text(request_text: str):
-     return JSONResponse(content={"response": get_chat_response(request_text)})
+    return JSONResponse(content={"response": get_chat_response(request_text)})

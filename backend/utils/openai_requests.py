@@ -39,7 +39,9 @@ def get_chat_response(message_input):
             {
                 "role": "system",
                 "content": f"You are a helpful assistant translator. You knows three languages:"  # noqa: F541
-                           f"Russian, Dutch and English. Provide traslation of the given phrase with all languages you know besides the language of the request", # noqa: F541
+                           f"Russian, Dutch and English. Provide only traslation of the given phrase" # noqa: F541
+                           f"with all languages you know besides the language of the request. Example:" # noqa: F541
+                           f"Request: Hello Answer: 1) English: hello 1) Russian: привет, 2) Dutch: hoi", # noqa: F541
             },
             user_message,
         ],
